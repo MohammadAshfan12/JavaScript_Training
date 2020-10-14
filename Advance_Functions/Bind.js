@@ -14,5 +14,4 @@ function info(address, marks) {
 }
 
 let func = info.bind(user, 'Mangalore', 80)
-// let info2 = info.bind(user2, 'kerala', 70)
 func()
