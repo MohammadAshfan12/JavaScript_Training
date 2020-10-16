@@ -6,20 +6,32 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Analog Clock</title>
     <link rel="stylesheet" href="CSS/style.css">
-    <link rel="icon" type="image/jpeg" href="/Images/favicon.jpg" sizes="16*16" >
+    <link rel="icon" type="image/jpeg" href="/Images/favicon.jpg" sizes="16*16">
 
 </head>
 
 <body>
-    <div class="clock">
-        <img class="clock__image" src="Images/image.png">
-        <div class="clock__center__holder">
-            <div class="clock__center"></div>
-            <div class="clock__hr-hand" id="hr"></div>
-            <div class="clock__min-hand" id="min"></div>
-            <div class="clock__sec-hand" id="sec"></div>
+    <div class="container">
+        <div class="clock">
+            <img class="clock__image" src="Images/image.png">
+            <div class="clock__center__holder">
+                <div class="clock__center"></div>
+                <div class="clock__hr-hand" id="hr"></div>
+                <div class="clock__min-hand" id="min"></div>
+                <div class="clock__sec-hand" id="sec"></div>
+            </div>
         </div>
+       <button class="open-button btn"  onclick="openForm()">Custom Time</button>
     </div>
+
+    <div class="form-popup" id="myForm">
+        <div class="form-container">
+        Hours<input type="text" style= "width: 50px" id ="hor">
+        Miutes<input type="text" style= "width: 50px"  id="mon">
+        <button type="submit" onclick="changeTime()">Submit</button>
+        </div>
+      </div>
+    
     <script src="JS/main.js"></script>
 </body>
 
