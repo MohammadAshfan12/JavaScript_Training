@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="style.css" rel="stylesheet">
+  <title>Clock</title>
+</head>
+
+<body>
+  <h1>Analog Clock</h1>
+  <div class="clock">
+    <div class="hand hour" id="hour-hand"></div>
+    <div class="hand minute" id="minute-hand"></div>
+    <div class="hand second" id="second-hand"></div>
+    <div class="number number1">1</div>
+    <div class="number number2">2</div>
+    <div class="number number3">3</div>
+    <div class="number number4">4</div>
+    <div class="number number5">5</div>
+    <div class="number number6">6</div>
+    <div class="number number7">7</div>
+    <div class="number number8">8</div>
+    <div class="number number9">9</div>
+    <div class="number number10">10</div>
+    <div class="number number11">11</div>
+    <div class="number number12">12</div>
+  </div>
+  <button class="open-button btn" onclick="openForm()">Custom Time</button>
+  <div class="custom-time">
+    <div class="form-popup" id="myForm">
+      <div class="form-container">
+        Hours<input type="text" style="width: 50px" id="hor">
+        Miutes<input type="text" style="width: 50px" id="mon">
+        <button type="submit" id="btn" >Submit</button>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    function openForm() {
+    document.getElementById("myForm").style.display = "block";
+}
+  </script>
+  <script type="module">
+      import {clock} from './clockLib.js';
+  </script>
+</body>
+
+</html>
