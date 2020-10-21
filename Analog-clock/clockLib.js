@@ -27,7 +27,7 @@ export class clock {
             this.setRotation(secondHand, secondsRatio)
             this.setRotation(minuteHand, minutesRatio)
             this.setRotation(hourHand, hoursRatio);
-        }, 1000);
+        }, 1000)
     }
     else{
         clearInterval(myfunc);
@@ -52,15 +52,14 @@ function changeTime() {
     hour1 = document.getElementById('hor').value
     minute1 = document.getElementById('mon').value
     speed = document.getElementById('sp').value
-    if((hour1 === "") && (minute === "") && (speed === "")) return
-    let obj3 = new clock(hour1, minute1, speed, flag)
+    if(speed === "") {
+        speed = 1000;
+    }
+    let obj3 = new clock(null, hour1, minute1, speed, flag)
     obj3.display(speed);
 }
 if(flag === true){
     let obj = new clock(currentDate, hour1, minute1, flag);
     obj.display();
 }
-
-
-
 
