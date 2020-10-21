@@ -52,9 +52,7 @@ function changeTime() {
     hour1 = document.getElementById('hor').value
     minute1 = document.getElementById('mon').value
     speed = document.getElementById('sp').value
-    if(hour1 === "") return
-    if(minute === "") return
-    if(speed === "") return 
+    if((hour1 === "") && (minute === "") && (speed === "")) return
     let obj3 = new clock(hour1, minute1, speed, flag)
     obj3.display(speed);
 }
