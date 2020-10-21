@@ -1,7 +1,7 @@
 const hourHand = document.getElementById('hour-hand')
 const minuteHand = document.getElementById('minute-hand')
 const secondHand = document.getElementById('second-hand')
-var hour1, minute1, myfunc;
+var hour1, minute1, speed, myfunc;
 
 var flag = true;
 export class clock {
@@ -18,7 +18,7 @@ export class clock {
             this.second = 1;
         }
     }
-    display() {
+    display(speed) {
         if(flag === true){
         myfunc = setInterval(() => {
             const secondsRatio = this.second++ / 60
@@ -27,7 +27,7 @@ export class clock {
             this.setRotation(secondHand, secondsRatio)
             this.setRotation(minuteHand, minutesRatio)
             this.setRotation(hourHand, hoursRatio);
-        }, 1000)
+        }, 1000);
     }
     else{
         clearInterval(myfunc);
@@ -38,7 +38,7 @@ export class clock {
             this.setRotation(secondHand, secondsRatio)
             this.setRotation(minuteHand, minutesRatio)
             this.setRotation(hourHand, hoursRatio);
-        }, 1000)
+        }, speed)
     }
     }
     setRotation(hand, rotationRatio) {
@@ -51,11 +51,16 @@ function changeTime() {
     flag = false;
     hour1 = document.getElementById('hor').value
     minute1 = document.getElementById('mon').value
-    let obj3 = new clock(null, hour1, minute1, flag)
-    obj3.display();
+    speed = document.getElementById('sp').value
+    console.log(speed)
+    let obj3 = new clock(hour1, minute1, speed, flag)
+    obj3.display(speed);
 }
 if(flag === true){
     let obj = new clock(currentDate, hour1, minute1, flag);
     obj.display();
 }
+
+
+
 
