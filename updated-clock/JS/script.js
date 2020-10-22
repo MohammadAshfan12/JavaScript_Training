@@ -13,16 +13,16 @@ function createClock() {
     hour1 = document.getElementById('hor').value
     minute1 = document.getElementById('mon').value
     speed = document.getElementById('speed').value
-    let obj3 = new clock(null, hour1, minute1, false, speed)
-    const parentElm = document.getElementById('container');
-    parentElm.appendChild(obj3.getElement());
-     obj3.display(false);
+    let clockObj2 = new clock(null, hour1, minute1, flag, speed)
+    const parentElement = document.getElementById('container');
+    parentElement.appendChild(clockObj2.getElement());
+    clockObj2.display(flag);
 }
 if(flag === true){
-    let obj = new clock(currentDate, hour1, minute1, true, 1000);
+    let clockObj = new clock(currentDate, hour1, minute1, flag, 1000);
     const parentElm = document.getElementById('container');
-    parentElm.appendChild(obj.getElement());
-    obj.display(true);
+    parentElm.appendChild(clockObj.getElement());
+    clockObj.display(flag);
 }
 
 

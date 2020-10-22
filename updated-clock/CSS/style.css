@@ -34,8 +34,8 @@ body {
   justify-content: space-around;
 }
 .clock {
- min-width: 380px;
- height: 380px;
+ min-width: 370px;
+ height: 370px;
  background-color: rgba(238, 232, 238, 0.8);
  border-radius: 50%;
  border: 10px solid black;
@@ -155,8 +155,8 @@ body {
  border: 3px solid #f1f1f1;
  z-index: 9;
  width: 200px;
- height: 250px;
- margin-bottom: 20px;
+ height: 240px;
+ margin-bottom: 2px;
  border: 1px solid black;
  margin-left: 100px; 
  border-radius: 10px;
@@ -177,7 +177,7 @@ body {
  width: 100%;
  padding: 10px;
  background-color:rgb(109, 106, 106);
- height: 250px;
+ height: 240px;
  border-radius: 10px;
  border: 5px solid black;
 }
