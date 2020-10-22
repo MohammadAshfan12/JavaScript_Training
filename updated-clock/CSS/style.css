@@ -18,7 +18,7 @@ body {
  align-items: center;
  min-height: 100vh;
  overflow: hidden;
- background-image:url('/Images/bg.jpg');
+ background-image:url(/updated-clock/Images/bg.jpg);
  background-size: cover;
 }
 ::-webkit-scrollbar {
